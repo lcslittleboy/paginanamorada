@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa para minha namorada</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-9Jc3l+oIv6xWxd2uA0w3O7ZuFrgM8V/mR54X9fLpzbMD/Grarx8KzwPF5S5w5Y5/fZaKZZfJo5m4Xqx+0CtKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZEK6ZsCJ5I0PeX6U9jJU3T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="destaque">
+    <h1 class="text-white">Minha namorada, eu te amo!</h1>
+	</div>
+ </header>
+
+  <main class="container my-5">
+    <section>
+	<div class="destaque">
+      <h2>Texto de amor</h2>
+      <p>Meu amor, desde que você entrou na minha vida, eu não consigo mais imaginar como seria minha vida sem você. Você é a pessoa mais incrível que já conheci e me faz feliz todos os dias. Eu te amo muito!</p>
+    </div>
+	</section>
+
+    <section>
+	
+      <h2>Imagens fofas</h2>
+      <p>Imagens adoráveis que nós dois gostamos.</p>
+      <div class="image-gallery">
+        <img src="imagens/1.jpg" alt="Imagem 1">
+        <img src="imagens/2.jpg" alt="Imagem 2">
+        <img src="imagens/3.jpg" alt="Imagem 3">
+		<img src="imagens/4.jpg" alt="Foto 4">
+        <img src="imagens/5.jpg" alt="Foto 5">
+        <img src="imagens/6.jpg" alt="Foto 6">
+        <img src="imagens/7.jpg" alt="Foto 7">
+      </div>
+	  <button id="next-button">Próxima foto</button>
+     </section>
+  </main>
+
+  <footer class="bg-light p-3 text-center">
+    <p>Feito com amor por Lucas Gomes</p>
+  </footer>
+  
+  <script>
+ /* const imageGalleries = document.querySelectorAll('.image-gallery');
+imageGalleries.forEach(gallery => {
+  const images = gallery.querySelectorAll('img');
+  const container = document.createElement('div');
+  const prevButton = document.createElement('button');
+  const nextButton = document.createElement('button');
+  let currentIndex = 0;
+
+  // Adiciona a classe gallery-container ao contêiner das imagens
+  container.classList.add('gallery-container');
+
+  // Adiciona a classe gallery-prev-button e um ícone de seta esquerda ao botão de anterior
+  prevButton.classList.add('gallery-button', 'gallery-prev-button');
+  prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+
+  // Adiciona a classe gallery-next-button e um ícone de seta direita ao botão de próximo
+  nextButton.classList.add('gallery-button', 'gallery-next-button');
+  nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+
+  // Adiciona os botões e o contêiner das imagens ao DOM
+  gallery.appendChild(prevButton);
+  gallery.appendChild(container);
+  gallery.appendChild(nextButton);
+
+  // Adiciona cada imagem ao contêiner das imagens
+  images.forEach(img => container.appendChild(img));
+
+  // Exibe a primeira imagem da galeria
+  images[currentIndex].classList.add('active');
+
+  // Avança para a próxima imagem
+  nextButton.addEventListener('click', () => {
+    images[currentIndex].classList.remove('active');
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+    images[currentIndex].classList.add('active');
+  });
+
+  // Volta para a imagem anterior
+  prevButton.addEventListener('click', () => {
+    images[currentIndex].classList.remove('active');
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1;
+    }
+    images[currentIndex].classList.add('active');
+  });
+});*/
+
+
+const images = document.querySelectorAll('.image-gallery img');
+let currentIndex = 0;
+
+function showImage(index) {
+  images.forEach(image => {
+    image.style.display = 'none';
+  });
+  images[index].style.display = 'block';
+  currentIndex = index;
+}
+
+showImage(currentIndex);
+
+document.querySelector('#next-button').addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  showImage(currentIndex);
+});
+</script>

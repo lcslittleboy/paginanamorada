@@ -1,0 +1,79 @@
+/* Estilos para o cabeçalho */
+header {
+  background: linear-gradient(rgba(255, 192, 203, 0.8), rgba(255, 192, 203, 0.8)), url("imagens/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilos para o título principal */
+h1 {
+margin: 0;
+font-size: 36px;
+}
+
+/* Estilos para as seções */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+/* Estilos para as imagens */
+img {
+max-width: 30%;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+
+body {
+  background: url("imagens/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para as imagens da galeria */
+.image-gallery img {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Animação de transição suave nas imagens da galeria */
+.image-gallery img.active {
+  transform: scale(1.1);
+}
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #f2f2f2;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilos para o texto do rodapé */
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+.gallery-container {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.destaque {
+   background-color: #f1c40f; /* cor de fundo */
+   padding: 10px; /* espaçamento interno */
+   border-radius: 5px; /* bordas arredondadas */
+   box-shadow: 0 0 5px #f1c40f; /* sombra */
+   color: #fff; /* cor do texto */
+}
+
+
